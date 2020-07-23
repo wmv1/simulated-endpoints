@@ -1,11 +1,15 @@
-<h3>Editar o mock</h3>
-<%= form_with  model: @mock do |f| %>
 
-  <%= f.text_field :path, placeholder: "/path/exemplo" %>
-  <%= f.text_field :status, placeholder: "200" %>
-  <%= f.text_field :timeout, placeholder: "30" %>
-  <%= f.text_area :content, placeholder: "{\"Ola\" : \"Fulano\"}" %>
 
-  <%= f.submit "Enviar" %>
-<% end %>
-<%= link_to "Voltar", mocks_path %>
+<div class="row">
+  <div class="col-lg-6">
+
+  <div class="row">
+    <div class="col-lg-12"">
+      <h3>Editar o mock</h3>
+    </div>
+  </div>
+
+  <%= render "shared/form", mock: @mock %>
+
+  </div>
+</div>

@@ -1,11 +1,47 @@
-<% if flash[:alert] %>
-    <div class="alert"><%= flash[:alert] %></div>
-<% end %>
-<div>Mocks cadastrados</div>
+<div class="row ">
+  <div class="col-lg-12">
+    <% if flash[:alert] %>
+      <div class="alert alert-danger"><%= flash[:alert] %></div>
+    <% end %>
+  </div>
+</div>
 
-<ul>
-  <% @mocks.each do |mock| %>
-    <li><%= link_to mock.path, mock_path(mock)  %></li>
-  <% end %>
-</ul>
-<%= link_to "Adicionar novo Mock", new_mock_path %>
+<div class="row">
+  <div class="col-lg-12"">
+    <H1>Mocks cadastrados</div>
+  </div>
+
+
+<div class="row">
+  <div class="col-lg-6"">
+    <% @mocks.each do |mock| %>
+      <%= link_to mock_path(mock) do %>
+        <div class="list-group-item">
+          <div class=row>
+            <div class=col-sm-5>
+              NOME: <%=truncate(mock.name, :length => 50, :omission => "..." , :escape => false) %>
+            </div>
+          </div>
+          <div class=row>
+            <div class=col-sm-5>
+              PATH: <%=truncate(mock.path, :length => 50, :omission => "..." , :escape => false) %>
+              </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <%= link_to "Adicionar novo Mock", new_mock_path, class: 'btn btn-primary' %>
+  </div>
+</div>
+
+
+
+
+
+
+

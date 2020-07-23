@@ -1,3 +1,13 @@
 // Place all the styles related to the mock controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.btn-primary {
+  margin-top: 11px;
+}
+pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+.string { color: rgb(0, 0, 0); }
+.number { color: rgb(76, 0, 255); }
+.boolean { color: rgb(0, 162, 255); }
+.null { color: rgb(255, 0, 0); }
+.key { color: rgba($color: #0011ff, $alpha: 1.0); }

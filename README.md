@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### What is this APP for?
 
-Things you may want to cover:
+Create fake endpoints to be able to access them by other applications, for the purpose of simulating responses
 
-* Ruby version
+### But how?
 
-* System dependencies
+Create, update or remove endpoints, see through the "/mocks" route
 
-* Configuration
+Access the created endpoint, if it is running locally:
 
-* Database creation
+http/localhost:3000/your_end_point/
 
-* Database initialization
 
-* How to run the test suite
+* Ruby version  
+  ruby 2.3.3p222  
 
-* Services (job queues, cache servers, search engines, etc.)
+* Database creation  
+  rake db:migrate  
+* Rails Verison  
+  Rails 5.2.4.3  
 
-* Deployment instructions
 
-* ...
+Warning:
+
+This APP is just an experiment, there is a lot to improve.
+
+

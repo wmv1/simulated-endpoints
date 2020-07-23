@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_23_010341) do
+ActiveRecord::Schema.define(version: 2020_07_23_034840) do
 
   create_table "mocks", force: :cascade do |t|
     t.string "path"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2020_07_23_010341) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "timeout"
+    t.string "name"
   end
 
 end

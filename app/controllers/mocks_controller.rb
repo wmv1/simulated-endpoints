@@ -37,7 +37,7 @@ class MocksController < ApplicationController
 
   private
   def mock_params
-    params.require(:mock).permit(:path, :status, :content, :timeout)
+    params.require(:mock).permit(:path, :status, :content, :timeout, :name)
   end
 
 end
