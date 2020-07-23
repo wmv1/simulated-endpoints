@@ -1,0 +1,7 @@
+<h1><%= @mock.path %></h1>
+<h4>"<%= @mock.status %>"</h4>
+<h4>"<%= @mock.content %>"</h4>
+<%= link_to 'Remover', @mock, method: :delete, data: { confirm: 'Certeza?' } %>
+<%= link_to 'Editar', edit_mock_path(@mock), method: :get %>
+<%= link_to "Adicionar novo Mock", new_mock_path %>
+<%= link_to "Voltar", mocks_path %>

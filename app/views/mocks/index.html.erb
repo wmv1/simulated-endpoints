@@ -1,0 +1,11 @@
+<% if flash[:alert] %>
+    <div class="alert"><%= flash[:alert] %></div>
+<% end %>
+<div>Mocks cadastrados</div>
+
+<ul>
+  <% @mocks.each do |mock| %>
+    <li><%= link_to mock.path, mock_path(mock)  %></li>
+  <% end %>
+</ul>
+<%= link_to "Adicionar novo Mock", new_mock_path %>
