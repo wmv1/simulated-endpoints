@@ -1,7 +1,7 @@
 
 
 <div class="row">
-  <div class="col-lg-6">
+  <div class="col-lg-12">
 
   <div class="row">
     <div class="col-lg-12"">
@@ -9,28 +9,30 @@
     </div>
   </div>
 
-<label>NOME:</label>
-<h6>"<%= @mock.name %>"</h6>
+    <label>NOME:</label>
+    <h6><%= @mock.name %></h6>
 
-<label>PATH:</label>
- <a href="<%="http://#{request.host}:#{request.port}#{@mock.path}"%>"> <h6><%= @mock.path %></h6> </a>
+    <label>PATH:</label>
+    <a href="<%="http://#{request.host}:#{request.port}#{@mock.path}"%>"> <h6><%= @mock.path %></h6> </a>
 
-<label>HTTP STATUS:</label>
-<h6>"<%= @mock.status %>"</h6>
-<label>TIMEOUT:</label>
-<h6>"<%= @mock.timeout %>"</h6>
-<label>CONTENT:</label>
-<pre id="teste"><%= @mock.content %></pre>
+    <label>HTTP STATUS:</label>
+    <h6><%= @mock.status %></h6>
+    <label>TIMEOUT:</label>
+    <h6><%= @mock.timeout %></h6>
+    <label>CONTENT:</label>
+    <pre id="teste"><%= @mock.content %></pre>
 
-<div class="row">
-  <div class="col-sm-12">
-    <%= link_to 'Remover', @mock, method: :delete, data: { confirm: 'Certeza?' }, class: 'btn btn-primary' %>
-    <%= link_to 'Editar', edit_mock_path(@mock), method: :get, class: 'btn btn-primary' %>
-    <%= link_to "Adicionar novo Mock", new_mock_path, class: 'btn btn-primary' %>
-    <%= link_to "Voltar", mocks_path, class: 'btn btn-primary' %>
-  </div>
-</div>
+    <div class="row">
+      <div class="col-sm-12">
+        <%= link_to 'Remover', @mock, method: :delete, data: { confirm: 'Certeza?' }, class: 'btn btn-primary' %>
+        <%= link_to 'Editar', edit_mock_path(@mock), method: :get, class: 'btn btn-primary' %>
+        <%= link_to "Adicionar novo Mock", new_mock_path, class: 'btn btn-primary' %>
+        <%= link_to "Voltar", mocks_path, class: 'btn btn-primary' %>
+      </div>
+    </div>
+    <div class="row">
 
+    </div>
   </div>
 </div>
 

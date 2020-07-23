@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Mock.create(path: "/customer/1", status: "200", content: "{\"name\" : \"Customer Name\" }", timeout: "5", name: "Find by customer")

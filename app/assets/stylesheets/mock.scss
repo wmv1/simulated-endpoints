@@ -4,10 +4,16 @@
 
 .btn-primary {
   margin-top: 11px;
+  background-color: #ff0000;
 }
+
 pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
 .string { color: rgb(0, 0, 0); }
 .number { color: rgb(76, 0, 255); }
 .boolean { color: rgb(0, 162, 255); }
 .null { color: rgb(255, 0, 0); }
 .key { color: rgba($color: #0011ff, $alpha: 1.0); }
+
+label {
+  font-weight: bolder;
+}

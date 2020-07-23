@@ -17,7 +17,7 @@ http/localhost:3000/your_end_point/
   ruby 2.3.3p222  
 
 * Database creation  
-  rake db:migrate  
+  rake db:setup  
 * Rails Verison  
   Rails 5.2.4.3  
 
