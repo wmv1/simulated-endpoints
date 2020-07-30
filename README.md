@@ -10,17 +10,23 @@ Create, update or remove endpoints, see through the "/mocks" route
 
 Access the created endpoint, if it is running locally:
 
-http/localhost:3000/your_end_point/
+http/localhost:your_port/your_end_point/
 
 
-* Ruby version  
-  ruby 2.3.3p222  
+* Ruby version
+  ruby 2.3.3p222
 
-* Database creation  
-  rake db:setup  
-* Rails Verison  
-  Rails 5.2.4.3  
+* Rails Verison
+  Rails 5.2.4.3
 
+### RUN
+- bundle install
+
+- rake db:setup
+
+- RACK_ENV=none RAILS_ENV=development unicorn -c config/unicorn.rb -p 3002
+
+- See the "config/unicorn.rb" for configure workers
 
 Warning:
 
