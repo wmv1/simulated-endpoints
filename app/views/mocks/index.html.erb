@@ -27,6 +27,11 @@
               PATH: <%=truncate(mock.path, :length => 50, :omission => "..." , :escape => false) %>
               </div>
           </div>
+          <div class=row>
+            <div class=col-sm-5>
+                <a href="<%="http://#{request.host}:#{request.port}#{mock.path}"%>"> <h6>Acessar</h6> </a>
+              </div>
+          </div>
         </div>
       <% end %>
     <% end %>

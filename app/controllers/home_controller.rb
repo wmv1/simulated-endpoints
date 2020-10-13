@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    mock = Mock.find_by_path(request.fullpath)
+    mock = Mock.find_by_path(request.env['REQUEST_URI'])
     sleep mock.timeout
 
     render json: mock.content, status: mock.status
