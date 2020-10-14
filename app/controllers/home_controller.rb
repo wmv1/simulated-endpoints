@@ -7,7 +7,7 @@ class HomeController < ApplicationController
 
     render json: mock.content, status: mock.status
   rescue
-    client = Clients::GenericClient.new
+    client = GenericClient.new
 
     if request.env['REQUEST_METHOD'] == "GET"
       response = client.get(request.env['REQUEST_URI'])
