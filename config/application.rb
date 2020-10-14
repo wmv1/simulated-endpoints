@@ -7,9 +7,22 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 module ApiStub
+
+  class Settings < Settingslogic
+    source "config/settings.yml"
+    namespace Rails.env
+  end
+
+  def self.config
+    Settings
+  end
+
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
+    config.eager_load_paths += %W[#{config.root}/lib]
+    config.time_zone = 'Brasilia'
+
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers

@@ -1,0 +1,14 @@
+default: &default
+  origin_host: https://host.com
+  origin_service_name: service_host
+
+  systems_cas:
+    base:  'https://$cas-base/'
+    base_authority: base_authority
+    service: 'service.com.br'
+    username:   'username'
+    password:   'password'
+    verify_ssl: false
+
+development:
+  <<: *default
