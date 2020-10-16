@@ -18,14 +18,14 @@ Rails.application.configure do
     config.action_controller.perform_caching = true
 
     # config.cache_store = :memory_store
+    config.cache_store = :redis_store, "redis://localhost:6379/0/cache", { expires_in: 10.minutes }
     config.public_file_server.headers = {
       'Cache-Control' => "public, max-age=#{2.days.to_i}"
     }
   else
     config.action_controller.perform_caching = false
 
-    # config.cache_store = :null_store
-    config.cache_store = :redis_store, "redis://localhost:6379/0/cache", { expires_in: 10.minutes }
+    config.cache_store = :null_store
   end
 
   # Store uploaded files on the local file system (see config/storage.yml for options)
@@ -60,8 +60,8 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  config.logger = Logger.new(STDOUT)
-  config.logger.level = Logger.const_get(
-    ENV['LOG_LEVEL'] ? ENV['LOG_LEVEL'].upcase : 'DEBUG'
-  )
+  # config.logger = Logger.new(STDOUT)
+  # config.logger.level = Logger.const_get(
+  #   ENV['LOG_LEVEL'] ? ENV['LOG_LEVEL'].upcase : 'DEBUG'
+  # )
 end

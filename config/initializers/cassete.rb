@@ -6,5 +6,3 @@ Cassette.config = OpenStruct.new(
   base_authority: ApiStub.config.systems_cas.base_authority,
   verify_ssl: false,       # If not defined, the default value will be: false.
 )
-
-# Cassette::Cache.backend = :redis_store, "redis://localhost:6379/0/cache", { expires_in: 5.minutes }
