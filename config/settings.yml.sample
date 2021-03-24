@@ -9,6 +9,9 @@ default: &default
     username:   'username'
     password:   'password'
     verify_ssl: false
+    tls_version: 'TLSv1_2'
+
+  ssl_valitade: false
 
 development:
   <<: *default

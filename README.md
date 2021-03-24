@@ -15,7 +15,7 @@ Access the created endpoint, if it is running locally:
 http/localhost:your_port/your_end_point/
 
 ### How to configure?
-- Create the file config/settings.xml and paste the config below, replace values according yours necessities
+- Create the file config/settings.yml and paste the config below, replace values according yours necessities
 
 ```yaml
 default: &default
